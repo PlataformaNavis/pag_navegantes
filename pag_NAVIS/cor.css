@@ -1,0 +1,479 @@
+/* !! ATENÇÃO !!
+O seu arquivo 'cor.css' original não foi fornecido.
+Para manter a aparência original, você DEVE COPIAR todo o conteúdo 
+de 'cor.css' e colar aqui.
+
+Os estilos abaixo são apenas para que as novas
+funcionalidades do React (menu e modal) funcionem.
+*/
+
+/* ---------------------------------- */
+/* Estilos Funcionais (Substitua pelos seus) */
+/* ---------------------------------- */
+
+/* Esconde o menu mobile por padrão (exemplo) */
+nav ul {
+  /* Assumindo que no mobile ele é escondido por padrão */
+  /* Ajuste isso de acordo com seu 'cor.css' */
+  display: none; 
+}
+
+/* Mostra o menu quando a classe 'show' é adicionada pelo React */
+nav ul.show {
+  display: block; /* Ou 'flex', dependendo do seu design */
+}
+
+/* Esconde o modal por padrão */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+/* Mostra o modal quando a classe 'show' é adicionada pelo React */
+.modal.show {
+  display: flex; /* Usamos flex para centralizar o .modal-content */
+  align-items: center;
+  justify-content: center;
+}
+
+/* Adicione aqui os estilos para '.post-card' 
+  que eu criei para exibir os posts
+*/
+.post-card {
+  border: 1px solid #eee;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+  background: #fdfdfd;
+}
+
+.post-card h4 {
+  margin-top: 0;
+}
+
+.post-actions button {
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* ---------------------------------- */
+/* FIM DOS ESTILOS FUNCIONAIS */
+/* ---------------------------------- */
+
+
+/* COLE O CONTEÚDO DO SEU 'cor.css' AQUI
+*/* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #f4faff;
+    color: #003366;
+    line-height: 1.6;
+}
+
+/* ======== CONTAINERS ======== */
+.container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* ======== HEADER ======== */
+header {
+    background: linear-gradient(135deg, #0077b6, #00b4d8);
+    color: white;
+    padding: 1rem 0 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.header-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav ul li a:hover {
+    color: #caf0f8;
+}
+
+.btn-entrar {
+    background: #023e8a;
+    color: white;
+    border: none;
+    padding: 0.6rem 1rem;
+    border-radius: 25px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.btn-entrar:hover {
+    background: #0077b6;
+}
+
+/* ======== WAVES ======== */
+.waves-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 70px;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 100%;
+    animation: waveMove 8s infinite linear;
+}
+
+.wave:nth-child(2) {
+    animation-delay: -4s;
+    opacity: 0.5;
+}
+
+@keyframes waveMove {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+/* ======== SEÇÕES ======== */
+section {
+    margin: 3rem 0;
+}
+
+.section-title {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* ======== FEED ======== */
+.post-form {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 1rem;
+}
+/* ... (pode adicionar perto de .post-input) ... */
+
+/* ESTILO PARA O NOVO CAMPO DE AUTOR */
+#inputAutor {
+    height: auto; /* Altura automática para o input de texto */
+    margin-bottom: 0.5rem; /* Pequena margem inferior */
+}
+
+
+.post-input {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 0.8rem;
+    resize: none;
+    height: 80px;
+    margin-bottom: 0.8rem;
+}
+
+.post-btn {
+    background: #0077b6;
+    color: white;
+    border: none;
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.post-btn:hover {
+    background: #0096c7;
+}
+
+/* ======== FILTROS ======== */
+.filters {
+    display: flex;
+    gap: 0.8rem;
+    margin-bottom: 1rem;
+}
+
+.filter-btn {
+    border: 1px solid #0077b6;
+    background: white;
+    color: #0077b6;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: #0077b6;
+    color: white;
+}
+
+/* ======== POSTS ======== */
+.post {
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.post-info {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.post-info i {
+    color: #0077b6;
+}
+
+.post-actions {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 0.8rem;
+}
+
+.like-btn, .comment-btn {
+    cursor: pointer;
+    color: #0077b6;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.like-btn:hover, .comment-btn:hover {
+    color: #0096c7;
+}
+
+/* ======== CONQUISTAS ======== */
+.badges {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.badge {
+    flex: 1 1 250px;
+    background: white;
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.badge-icon {
+    font-size: 2rem;
+    color: #0077b6;
+    margin-bottom: 0.5rem;
+}
+
+/* ======== EVENTOS ======== */
+.events-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.event {
+    flex: 1 1 300px;
+    background: white;
+    padding: 1rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.event-date {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #0077b6;
+}
+
+.btn-participar {
+    background: #0077b6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    padding: 0.6rem 1rem;
+    margin-top: 0.8rem;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-participar:hover {
+    background: #00b4d8;
+}
+
+/* ======== FOOTER ======== */
+footer {
+    background: #023e8a;
+    color: white;
+    text-align: center;
+    padding: 2rem 0;
+}
+
+.footer-logo {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.social-links a {
+    color: white;
+    margin: 0 0.5rem;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.social-links a:hover {
+    color: #90e0ef;
+}
+
+/* ======== MODAL ======== */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0, 51, 102, 0.6);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    padding: 1rem;
+}
+
+.modal-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close-modal {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
+
+/* ======== RESPONSIVO ======== */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background: #0077b6;
+        position: absolute;
+        top: 60px;
+        right: 20px;
+        border-radius: 8px;
+        padding: 1rem;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+        font-size: 1.5rem;
+        cursor: pointer;
+    }
+}
+/* ======== SCROLL SUAVE (NOVO) ======== */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======== DESCRIÇÕES DE SEÇÃO (NOVO) ======== */
+.section-description {
+    margin-bottom: 2rem; /* Espaço antes do título da seção (ex: Feed) */
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+.section-description h3 {
+    font-size: 1.5rem;
+    color: #0077b6; /* Cor principal */
+    margin-bottom: 1rem;
+}
+
+.section-description p {
+    margin-bottom: 1rem;
+    line-height: 1.7; /* Melhora a legibilidade */
+}
+
+/* Tira a última margem do parágrafo */
+.section-description p:last-child {
+    margin-bottom: 0;
+}
+
+/* ======== AJUSTES NA SEÇÃO WELCOME (NOVO) ======== */
+section.welcome {
+    text-align: center;
+    padding: 2rem 0;
+}
+
+section.welcome h1 {
+     margin-bottom: 1rem;
+     font-size: 1.8rem;
+     color: #023e8a; /* Cor mais escura para o título */
+}
+
+section.welcome p {
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+}

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comunidade dos Navegantes - NAVIS</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cor.css">
+</head>
+
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <img src="navis_logo.png.png" alt="Logo NAVIS" style="height: 50px;"> </div>
+            <div class="menu-toggle" id="menuToggle">
+                <i class="fas fa-bars"></i>
+            </div>
+           <nav>
+                <ul id="navMenu">
+                    <li><a href="#inicio">Início</a></li>
+                    <li><a href="#comunidade">Comunidade</a></li>
+                    <li><a href="#projetos">Projetos</a></li>
+                    <li><a href="#eventos">Eventos</a></li>
+                    <li><a href="#perfil">Perfil</a></li>
+                </ul>
+            </nav>
+            <button class="btn-entrar">Entrar como Navegante</button>
+        </div>
+        <div class="waves-container">
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <section class="welcome" id="inicio">
+                <h1>🌎 Bem-vindo à Comunidade NAVIS</h1>
+                <p> NAVIS — o caminho certo é o caminho seguro</p>
+                <p>Aqui você descobre o propósito que move nossa jornada: tornar o ir e vir das pessoas mais tranquilo, confiável e humano.</p>
+                <p>A NAVIS nasceu do desejo de transformar o medo em movimento — com tecnologia, empatia e colaboração.</p>
+                <p>Navegue pelas abas, conecte-se com outros usuários e conheça projetos que estão mudando a forma como vivemos as cidades.</p>
+                <p><strong>Cidades evoluem, quando todos participam!</strong></p>
+            </section>
+            <section class="feed" id="comunidade">
+                
+                <div class="section-description">
+                    <h3>💬 Comunidade</h3>
+                    <p>Este é o coração da NAVIS — o espaço dos navegantes.</p>
+                    <p>Aqui você pode compartilhar experiências, relatar trajetos, dar dicas de segurança e apoiar quem se move pela cidade.</p>
+                    <p>Cada história, comentário e sugestão ajuda a construir uma rede viva de confiança.</p>
+                    <p>💡 Participe de discussões, conheça outras pessoas da sua região e contribua com ideias para melhorar a mobilidade urbana.</p>
+                    <p>🔹 Transparência, proteção, inclusão e inovação responsável — tudo começa na comunidade.</p>
+                </div>
+
+                <h2 class="section-title">
+                    <i class="fas fa-users"></i>
+                    Feed da Comunidade
+                </h2>
+
+                <div class="post-form">
+    <input type="text" id="inputAutor" class="post-input" placeholder="Seu nome...">
+    <textarea class="post-input" placeholder="Compartilhe sua ideia, navegante..."></textarea>
+    <button class="post-btn" id="btnPublicar">Publicar</button>
+</div>
+                <div class="filters">
+                    <button class="filter-btn active" data-filter="recent">Mais recentes</button>
+                    <button class="filter-btn" data-filter="liked">Mais curtidos</button>
+                </div>
+
+                <div class="posts-container" id="postsContainer"></div>
+            </section>
+
+            <section class="achievements">
+                <h2 class="section-title">
+                    <i class="fas fa-trophy"></i>
+                    Conquistas
+                </h2>
+
+                <div class="badges">
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-compass"></i></div>
+                        <h3>Explorador</h3>
+                        <p>Quem inicia novas jornadas e descobre caminhos</p>
+                    </div>
+
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-hands-helping"></i></div>
+                        <h3>Colaborador</h3>
+                        <p>Quem fortalece a comunidade com apoio mútuo</p>
+                    </div>
+
+                    <div class="badge">
+                        <div class="badge-icon"><i class="fas fa-star"></i></div>
+                        <h3>Mentor</h3>
+                        <p>Quem guia outros navegantes em suas trajetórias</p>
+                    </div>
+                </div>
+            </section>
+            </section>
+
+            <section id="projetos">
+                <div class="section-description">
+                    <h3>🚀 Projetos</h3>
+                    <p>A NAVIS acredita que inovação nasce da colaboração.</p>
+                    <p>Nesta aba, você encontra projetos em andamento, protótipos, ideias e iniciativas desenvolvidas por nossa equipe e pela própria comunidade.</p>
+                    <p>Acompanhe o progresso de soluções criadas com base em dados, IA e empatia — desde o aprimoramento das rotas seguras até programas de inclusão digital.</p>
+                    <p>Você também pode propor novos projetos, colaborar em etapas de desenvolvimento e ver sua ideia impactar a cidade.</p>
+                    <p>🌱 Aqui, cada projeto é um passo em direção a um futuro mais seguro e humano.</p>
+                </div>
+            </section>
+          <section class="events" id="eventos">
+
+                <div class="section-description">
+                    <h3>📅 Eventos</h3>
+                    <p>A NAVIS está sempre em movimento — e nossos eventos são oportunidades para conectar, aprender e agir.</p>
+                    <p>Participe de oficinas, encontros presenciais, lives e debates sobre segurança urbana, tecnologia e cidadania digital.</p>
+                    <p>Fique de olho nas próximas datas e envolva-se nas atividades que mais combinam com você.</p>
+                    <p>🔔 Transformar as cidades é um trabalho coletivo — e você faz parte disso.</p>
+                </div>
+
+                <h2 class="section-title">
+                    <i class="fas fa-calendar-alt"></i>
+                    Eventos Futuros
+                </h2>
+                <div class="events-container">
+                    <div class="event">
+                        <div class="event-date">15 OUT</div>
+                        <h3>Encontro Mensal dos Navegantes</h3>
+                        <p>Nosso encontro mensal para compartilhar experiências e planejar as próximas jornadas.</p>
+                        <button class="btn-participar">Participar</button>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-date">22 OUT</div>
+                        <h3>Workshop: Captação de Recursos</h3>
+                        <p>Aprenda estratégias eficazes para financiar seus projetos de impacto social.</p>
+                        <button class="btn-participar">Participar</button>
+                    </div>
+
+                    <div class="event">
+                        <div class="event-date">05 NOV</div>
+                        <h3>Desafio: Inovação Comunitária</h3>
+                        <p>Participe do nosso desafio de 30 dias para desenvolver soluções criativas.</p>
+                        <button class="btn-participar">Participar</button>
+                    </div>
+                </div>
+            </section>
+            </section>
+
+            <section id="perfil">
+                <div class="section-description">
+                    <h3>👤 Perfil</h3>
+                    <p>Este é o seu espaço pessoal dentro da comunidade NAVIS.</p>
+                    <p>Aqui você pode atualizar suas informações, acompanhar suas contribuições, gerenciar seus projetos e interagir com outros navegantes.</p>
+                    <p>Quanto mais você participa, mais a plataforma entende suas preferências e te conecta com pessoas e iniciativas que fazem sentido pra você.</p>
+                    <p>💫 Seu perfil é o reflexo do seu impacto — cada passo conta para construir cidades mais seguras e humanas.</p>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <img src="navis_logo.png.png" alt="Logo NAVIS" style="height: 50px;"> </div>
+                <p>NAVIS — Navegando juntos rumo a um futuro melhor.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="modal" id="commentsModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title">Comentários</h3>
+                <button class="close-modal">&times;</button>
+            </div>
+            <div class="comments-container" id="commentsContainer"></div>
+            <div class="comment-form">
+                <input type="text" class="comment-input" placeholder="Escreva um comentário...">
+                <button class="comment-btn"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </div>
+
+    <script src="bot.js"></script>
+</body>
+</html>
