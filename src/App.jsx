@@ -2,7 +2,7 @@
 
 // Importamos o React e a logo
 import React from 'react';
-import navisLogo from './assets/navis_logo.png.png'; // Verifique o caminho
+import navisLogo from './assets/navis_logo.png'; // Verifique o caminho
 
 // Importamos nossos componentes
 import Header from './Header';
