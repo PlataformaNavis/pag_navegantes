@@ -24,10 +24,11 @@ Atuei no **marketing e no front-end** da NAVIS. Neste repositório, desenvolvi a
 - **Persistência no navegador.** Os posts são salvos e restaurados do `localStorage` (chave `navisPosts`) via `useEffect`, o que permite testar a experiência sem back-end.
 - **Comentários em modal.** O `CommentsModal` recebe o post selecionado por props e devolve os novos comentários ao `Feed`.
 - **Build com rolldown-vite.** O `package.json` fixa `vite` em `rolldown-vite@7.1.14` via `overrides`.
+- **CI.** Todo PR e push na `main` roda `npm run lint` e `npm run build` via GitHub Actions.
 
 ## Demonstração
 
-![Feed da comunidade com filtro e comentários](docs/assets/navis-feed.gif)
+![Página da comunidade NAVIS com feed e filtros](docs/assets/navis-feed.png)
 
 ## Como executar
 
@@ -37,12 +38,13 @@ Atuei no **marketing e no front-end** da NAVIS. Neste repositório, desenvolvi a
 git clone https://github.com/PlataformaNavis/pag_navegantes.git
 cd pag_navegantes
 npm install
-npm run dev
+npm run dev       # servidor de desenvolvimento em http://localhost:5173
+npm run lint      # ESLint
+npm run build     # build de produção em dist/
+npm run preview   # serve o build localmente
 ```
 
-> ⚠️ **Limitação conhecida:** o `index.html` referencia `/src/main.jsx`, mas os componentes estão na raiz do repositório e o `Header.jsx` importa a logo de `./assets/`, pasta que não existe (a imagem está só em `pag_NAVIS/`). Por isso `npm run dev` e `npm run build` falham hoje com `Failed to resolve /src/main.jsx`. A correção é mover os arquivos `.jsx`/`.css` para `src/` e copiar a logo para `src/assets/`.
-
-**Versão estática (funciona sem instalação):** abra `pag_NAVIS/corpo.html` no navegador.
+**Versão estática (protótipo original, sem instalação):** abra `pag_NAVIS/corpo.html` no navegador.
 
 **Testes:** o projeto não possui testes automatizados.
 
@@ -50,13 +52,16 @@ npm run dev
 
 ```
 .
-├── index.html            # entrada do Vite
-├── main.jsx              # bootstrap do React
-├── App.jsx               # compõe Header, Feed e seções da página
-├── Header.jsx
-├── Feed.jsx              # posts, filtro e persistência em localStorage
-├── CommentsModal.jsx
-├── *.css
+├── index.html            # entrada do Vite (fontes e ícones via CDN)
+├── public/               # favicon
+├── src/
+│   ├── main.jsx          # bootstrap do React
+│   ├── App.jsx           # compõe Header, Feed e seções da página
+│   ├── Header.jsx
+│   ├── Feed.jsx          # posts, filtro e persistência em localStorage
+│   ├── CommentsModal.jsx
+│   ├── assets/           # logo
+│   └── *.css
 ├── pag_NAVIS/            # protótipo original em HTML/CSS/JS
-└── .github/workflows/    # workflow de publicação em GitHub Packages
+└── .github/workflows/    # CI: lint + build
 ```
